@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>METALLICA</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#12181e; --surface:#1b232b; --text:#e8e4dc; --muted:#98a1a8; --accent:#c4472b; --line:#2c3741;
+  color-scheme:dark;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12181e;--surface:#1b232b;--text:#e8e4dc;--muted:#98a1a8;--accent:#d9573a;--line:#2c3741;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12181e;--surface:#1b232b;--text:#e8e4dc;--muted:#98a1a8;--accent:#d9573a;--line:#2c3741}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#e8e4dc;--surface:#dcd7cc;--text:#12181e;--muted:#4d5860;--accent:#a8341b;--line:#bdb7aa;color-scheme:light}}
+:root[data-theme="light"]{--bg:#e8e4dc;--surface:#dcd7cc;--text:#12181e;--muted:#4d5860;--accent:#a8341b;--line:#bdb7aa}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 "Work Sans",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:14px clamp(20px,5vw,64px)}
+header b{font:900 22px "Big Shoulders Display",Impact,sans-serif;letter-spacing:.08em}
+nav{display:flex;gap:clamp(14px,3vw,32px)}
+nav a{text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--text)}
+.hero{padding:clamp(48px,10vw,120px) clamp(20px,5vw,64px) clamp(40px,7vw,80px);border-bottom:1px solid var(--line)}
+.hero h1{margin:0;font:900 clamp(56px,16.5vw,250px)/.85 "Big Shoulders Display",Impact,sans-serif;letter-spacing:-.01em;word-break:keep-all}
+.hero h1 i{font-style:normal;color:var(--accent);display:inline-block;transform:translateY(.04em)}
+.hero p{max-width:34em;margin:32px 0 0;font-size:clamp(18px,2.2vw,22px);color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{font:600 16px "Work Sans",sans-serif;padding:13px 22px;border:2px solid var(--text);background:transparent;color:var(--text);text-decoration:none;cursor:pointer}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+section{padding:clamp(40px,7vw,88px) clamp(20px,5vw,64px);border-bottom:1px solid var(--line);max-width:1100px}
+h2{margin:0 0 28px;font:800 clamp(34px,5vw,56px)/1 "Big Shoulders Display",Impact,sans-serif;letter-spacing:.02em}
+.about{display:grid;gap:20px;max-width:46em}
+.about p{margin:0}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:110px 1fr auto;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.rows time{font:800 24px "Big Shoulders Display",Impact,sans-serif;color:var(--accent)}
+.rows small{display:block;color:var(--muted)}
+.rows a{font-weight:600}
+.rows .sold{color:var(--muted);text-decoration:line-through}
+.rel{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.rel a{display:block;text-decoration:none;background:var(--surface);padding:20px;aspect-ratio:1/1;display:flex;flex-direction:column;justify-content:flex-end;border-left:4px solid var(--accent)}
+.rel b{font:800 28px/1 "Big Shoulders Display",Impact,sans-serif}
+.rel span{color:var(--muted)}
+.contact p{margin:0 0 20px;max-width:34em}
+.social{display:flex;flex-wrap:wrap;gap:22px;margin-top:28px}
+footer{padding:28px clamp(20px,5vw,64px);color:var(--muted);font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer button{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+@media (max-width:620px){
+  nav a:nth-child(n+4){display:none}
+  .rows li{grid-template-columns:1fr auto}
+  .rows time{grid-column:1/-1}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <b>METALLICA</b>
+  <nav>
+    <a href="#about">Про гурт</a>
+    <a href="#tour">Концерти</a>
+    <a href="#music">Музика</a>
+    <a href="#contact">Контакти</a>
+  </nav>
+</header>
+
+<main>
+<div class="hero">
+  <h1><i>M</i>ETALLIC<i>A</i></h1>
+  <p>Треш-метал із Лос-Анджелеса. Важкі рифи, швидкісні соло й стадіонна енергія з 1981 року.</p>
+  <div class="btns">
+    <a class="btn main" href="#music">Слухати</a>
+    <a class="btn" href="#tour">Дати концертів</a>
+  </div>
+</div>
+
+<section id="about">
+  <h2>Про гурт</h2>
+  <div class="about">
+    <p>Metallica заснована у жовтні 1981 року Джеймсом Гетфілдом і Ларсом Ульріхом. У нинішньому складі гурту також грають соло-гітарист Кірк Гемметт та басист Роберт Трухільйо.</p>
+    <p>Гурт випустив 11 студійних альбомів, серед яких культові «Master of Puppets», «Metallica» (The Black Album) та «72 Seasons», поєднуючи агресивний треш-метал із мелодійними аранжуваннями.</p>
+  </div>
+</section>
+
+<section id="tour">
+  <h2>Концерти</h2>
+  <ul class="rows" id="tourList"></ul>
+</section>
+
+<section id="music">
+  <h2>Музика</h2>
+  <div class="rel">
+    <a href="https://open.spotify.com/album/70ueW6Bw2133015E24e1u3" target="_blank" rel="noopener"><span>Новий реліз</span><b>72 Seasons</b></a>
+    <a href="https://open.spotify.com/track/0nLiqZ6A27jJri2VCalIUs" target="_blank" rel="noopener"><span>Класичний трек</span><b>One</b></a>
+    <a href="https://open.spotify.com/album/2Lq2qX3hYhiuPckC8Flj21" target="_blank" rel="noopener"><span>Культовий альбом</span><b>Master of Puppets</b></a>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Контакти</h2>
+  <p>Букінг, преса та співпраця: пишіть на пошту менеджменту.</p>
+  <div class="btns">
+    <a class="btn main" id="mail" href="mailto:management@metallica.com">management@metallica.com</a>
+    <button class="btn" id="copy" type="button">Скопіювати адресу</button>
+  </div>
+  <div class="social">
+    <a href="https://www.instagram.com/metallica/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.youtube.com/user/MetallicaTV" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB" target="_blank" rel="noopener">Spotify</a>
+    <a href="https://www.facebook.com/Metallica" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>© 2026 METALLICA</span>
+  <button id="theme" type="button">Змінити тему</button>
+</footer>
+
+<script>
+// Редагуйте дати тут: status = "tickets" | "sold"
+var shows = [
+  {d:"14.05", city:"Варшава, Польща", venue:"PGE Narodowy", status:"tickets", url:"https://www.metallica.com/tour/"},
+  {d:"22.05", city:"Мюнхен, Німеччина", venue:"Olympiastadion", status:"tickets", url:"https://www.metallica.com/tour/"},
+  {d:"30.05", city:"Мадрид, Іспанія", venue:"Estadio Metropolitano", status:"sold", url:"https://www.metallica.com/tour/"}
+];
+var ul = document.getElementById("tourList");
+shows.forEach(function(s){
+  var li = document.createElement("li");
+  var act = s.status === "sold"
+    ? '<span class="sold">Квитків немає</span>'
+    : '<a href="' + s.url + '" target="_blank" rel="noopener">Купити квиток</a>';
+  li.innerHTML = '<time>' + s.d + '</time><div>' + s.city + '<small>' + s.venue + '</small></div>' + act;
+  ul.appendChild(li);
+});
+
+var copy = document.getElementById("copy");
+copy.addEventListener("click", function(){
+  var mail = document.getElementById("mail").textContent;
+  var done = function(){ copy.textContent = "Скопійовано"; setTimeout(function(){ copy.textContent = "Скопіювати адресу"; }, 1800); };
+  if (navigator.clipboard) { navigator.clipboard.writeText(mail).then(done, done); } else { done(); }
+});
+
+var root = document.documentElement, btn = document.getElementById("theme");
+btn.addEventListener("click", function(){
+  var cur = root.getAttribute("data-theme") ||
+    (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  var next = cur === "light" ? "dark" : "light";
+  root.setAttribute("data-theme", next);
+  root.style.colorScheme = next;
+});
+</script>
+<script src="dom-navigator.js"></script>
+</body>
+</html>
